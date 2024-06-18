@@ -110,6 +110,7 @@ function findDOMNode(
     try {
       console.error = (...messages) => {
         // Ignore strict mode warning for the findDomNode call below
+        // TODO: Write test for this.
         if (!messages[0].includes('Warning: %s is deprecated in StrictMode.')) {
           originalConsoleError(...messages)
         }
